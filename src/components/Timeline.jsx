@@ -20,6 +20,27 @@ export default function Timeline() {
 
   const certificationData = [
     {
+      title: "Salesforce Certified Agentforce Specialist",
+      issuer: "Salesforce",
+      date: "2025",
+      icon: <Award size={18} />,
+      link: "/certificates/salesforce1.pdf"
+    },
+    {
+      title: "Salesforce Certified AI Associate",
+      issuer: "Salesforce",
+      date: "2025",
+      icon: <Award size={18} />,
+      link: "/certificates/salesforce.pdf"
+    },
+    {
+      title: "AI & Prompt Engineering Intern",
+      issuer: "Vault of Codes",
+      date: "2025",
+      icon: <Briefcase size={18} />,
+      link: "/certificates/vaultsofcode.pdf"
+    },
+    {
       title: "Cloud Computing Intern",
       issuer: "InternPro",
       date: "2025",

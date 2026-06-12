@@ -93,6 +93,9 @@ export default function Chatbot() {
   5. Emotion Music Generator: Facial mood CNN classifier (88% accuracy) via TensorFlow/Keras & OpenCV, dynamically recommending playlists via Spotify/YouTube APIs.
   
   Certifications & Internships:
+  - Salesforce Certified Agentforce Specialist (2025)
+  - Salesforce Certified AI Associate (2025)
+  - AI & Prompt Engineering Intern - Vault of Codes (2025)
   - Cloud Computing Intern - InternPro (2025)
   - MongoDB Certified Associate Developer - Python (2025)
   - Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate (2025)
@@ -148,7 +151,7 @@ export default function Chatbot() {
     }
 
     if (q.includes('cert') || q.includes('certification') || q.includes('internship')) {
-      return "📜 **Certifications & Internships**\n• Cloud Computing Internship Certificate (InternPro, 2025)\n• MongoDB Certified Associate Developer - Python (2025)\n• Oracle Cloud Infrastructure Certified AI Foundations Associate (2025)\n• Google Cloud Computing Fundamentals (NPTEL, 2024)";
+      return "📜 **Certifications & Internships**\n• Salesforce Certified Agentforce Specialist (2025)\n• Salesforce Certified AI Associate (2025)\n• AI & Prompt Engineering Internship (Vault of Codes, 2025)\n• Cloud Computing Internship Certificate (InternPro, 2025)\n• MongoDB Certified Associate Developer - Python (2025)\n• Oracle Cloud Infrastructure Certified AI Foundations Associate (2025)\n• Google Cloud Computing Fundamentals (NPTEL, 2024)";
     }
 
     return "I can help you with questions about Naveen's projects (Agri-AI, AeroGuard), technical skills, contact details, or education history. \n\n*Tip: Click the Settings gear in the header to enter a Gemini API key and chat with a real LLM model!*";
