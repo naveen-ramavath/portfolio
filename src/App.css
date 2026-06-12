@@ -1140,12 +1140,11 @@
   text-decoration: underline;
 }
 
-/* Credentials Side-by-Side Layout */
+/* Credentials Layout (Stacked) */
 .credentials-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
-  align-items: start;
 }
 
 .credentials-sub-title {
@@ -1155,11 +1154,4 @@
   color: var(--text-primary);
   display: flex;
   align-items: center;
-}
-
-@media (max-width: 1024px) {
-  .credentials-layout {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
 }
