@@ -48,7 +48,7 @@ export default function Projects() {
         "Rendered live flight paths and proximity alerts on a Flask-based interactive dashboard with WebSocket streaming."
       ],
       tags: ["Apache Kafka", "PySpark", "Flask", "WebSocket", "Python", "Data Streaming"],
-      github: "https://github.com/naveen-ramavath/aeroguard", // Placeholder URL based on request
+      github: "https://github.com/naveen-ramavath/airplane-collision-system-using-kafka-",
       icon: <ShieldCheck size={22} />
     },
     {
