@@ -82,6 +82,15 @@ export default function Hero({ setActiveSection }) {
             <button onClick={() => handleScrollTo('projects')} className="gradient-btn">
               View Projects <ArrowRight size={16} />
             </button>
+            <a 
+              href="/resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="secondary-btn"
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
+            >
+              View Resume
+            </a>
             <button onClick={() => handleScrollTo('contact')} className="secondary-btn">
               Get In Touch
             </button>
