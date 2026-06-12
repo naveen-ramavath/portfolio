@@ -1111,3 +1111,31 @@
   0%, 80%, 100% { transform: scale(0); }
   40% { transform: scale(1); }
 }
+
+/* Interactive Certifications */
+.cert-card.interactive {
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.cert-card.interactive:hover {
+  border-color: var(--secondary-light);
+  background: rgba(20, 184, 166, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.15);
+}
+
+.cert-view-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--secondary-light);
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cert-card.interactive:hover .cert-view-link {
+  text-decoration: underline;
+}

@@ -23,31 +23,36 @@ export default function Timeline() {
       title: "Cloud Computing Intern",
       issuer: "InternPro",
       date: "2025",
-      icon: <Briefcase size={18} />
+      icon: <Briefcase size={18} />,
+      link: "/certificates/internpro.pdf"
     },
     {
       title: "MongoDB Certified Associate Developer (Python)",
       issuer: "MongoDB",
       date: "2025",
-      icon: <Award size={18} />
+      icon: <Award size={18} />,
+      link: "/certificates/mongodb.pdf"
     },
     {
       title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
       issuer: "Oracle",
       date: "2025",
-      icon: <Award size={18} />
+      icon: <Award size={18} />,
+      link: "/certificates/oracle.pdf"
     },
     {
       title: "Google Cloud Computing Fundamentals",
       issuer: "NPTEL",
       date: "2024",
-      icon: <Award size={18} />
+      icon: <Award size={18} />,
+      link: "/certificates/gcp.pdf"
     },
     {
       title: "LeetCode Ongoing Milestone (300+ DSA Solved)",
       issuer: "LeetCode",
       date: "Ongoing",
-      icon: <BookOpen size={18} />
+      icon: <BookOpen size={18} />,
+      link: "https://leetcode.com/u/naveenramavath4203/"
     }
   ];
 
@@ -97,17 +102,36 @@ export default function Timeline() {
         </div>
       ) : (
         <div className="cert-grid">
-          {certificationData.map((cert, index) => (
-            <div key={index} className="glass-panel cert-card">
-              <div className="cert-icon-box">
-                {cert.icon}
-              </div>
-              <div className="cert-info">
-                <h3 className="cert-title">{cert.title}</h3>
-                <span className="cert-issuer">{cert.issuer} • <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem' }}>{cert.date}</span></span>
-              </div>
-            </div>
-          ))}
+          {certificationData.map((cert, index) => {
+            const CardComponent = cert.link ? 'a' : 'div';
+            const extraProps = cert.link ? {
+              href: cert.link,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: "glass-panel cert-card interactive"
+            } : {
+              className: "glass-panel cert-card"
+            };
+
+            return (
+              <CardComponent key={index} {...extraProps}>
+                <div className="cert-icon-box">
+                  {cert.icon}
+                </div>
+                <div className="cert-info">
+                  <h3 className="cert-title">{cert.title}</h3>
+                  <span className="cert-issuer">
+                    {cert.issuer} • <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem' }}>{cert.date}</span>
+                  </span>
+                  {cert.link && (
+                    <span className="cert-view-link">
+                      View Document ↗
+                    </span>
+                  )}
+                </div>
+              </CardComponent>
+            );
+          })}
         </div>
       )}
     </section>
