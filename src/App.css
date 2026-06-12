@@ -1139,3 +1139,27 @@
 .cert-card.interactive:hover .cert-view-link {
   text-decoration: underline;
 }
+
+/* Credentials Side-by-Side Layout */
+.credentials-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.credentials-sub-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .credentials-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

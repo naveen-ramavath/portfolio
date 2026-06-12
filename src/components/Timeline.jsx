@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GraduationCap, Award, Calendar, BookOpen, Briefcase } from 'lucide-react';
 
 export default function Timeline() {
-  const [activeTab, setActiveTab] = useState('education');
 
   const educationData = [
     {
@@ -83,78 +82,75 @@ export default function Timeline() {
         <GraduationCap size={28} className="gradient-text" style={{ verticalAlign: 'middle' }} /> Education & Credentials
       </h2>
 
-      <div className="timeline-tabs">
-        <button
-          className={`timeline-tab-btn ${activeTab === 'education' ? 'active' : ''}`}
-          onClick={() => setActiveTab('education')}
-        >
-          Education
-        </button>
-        <button
-          className={`timeline-tab-btn ${activeTab === 'certifications' ? 'active' : ''}`}
-          onClick={() => setActiveTab('certifications')}
-        >
-          Certifications & Internships
-        </button>
-      </div>
-
-      {activeTab === 'education' ? (
-        <div className="timeline">
-          {educationData.map((item, index) => (
-            <div key={index} className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="glass-panel timeline-card">
-                <div className="timeline-header">
-                  <div>
-                    <h3 className="timeline-role">{item.role}</h3>
-                    <span className="timeline-org">{item.org}</span>
+      <div className="credentials-layout">
+        <div className="education-column">
+          <h3 className="credentials-sub-title">
+            <GraduationCap size={20} className="secondary-light" style={{ marginRight: '0.5rem' }} />
+            Education
+          </h3>
+          <div className="timeline">
+            {educationData.map((item, index) => (
+              <div key={index} className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="glass-panel timeline-card">
+                  <div className="timeline-header">
+                    <div>
+                      <h3 className="timeline-role">{item.role}</h3>
+                      <span className="timeline-org">{item.org}</span>
+                    </div>
+                    <span className="timeline-date">{item.date}</span>
                   </div>
-                  <span className="timeline-date">{item.date}</span>
+                  <p className="timeline-desc">{item.desc}</p>
+                  <ul className="timeline-desc-list">
+                    {item.details.map((detail, idx) => (
+                      <li key={idx} className="timeline-desc-item">{detail}</li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="timeline-desc">{item.desc}</p>
-                <ul className="timeline-desc-list">
-                  {item.details.map((detail, idx) => (
-                    <li key={idx} className="timeline-desc-item">{detail}</li>
-                  ))}
-                </ul>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      ) : (
-        <div className="cert-grid">
-          {certificationData.map((cert, index) => {
-            const CardComponent = cert.link ? 'a' : 'div';
-            const extraProps = cert.link ? {
-              href: cert.link,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "glass-panel cert-card interactive"
-            } : {
-              className: "glass-panel cert-card"
-            };
 
-            return (
-              <CardComponent key={index} {...extraProps}>
-                <div className="cert-icon-box">
-                  {cert.icon}
-                </div>
-                <div className="cert-info">
-                  <h3 className="cert-title">{cert.title}</h3>
-                  <span className="cert-issuer">
-                    {cert.issuer} • <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem' }}>{cert.date}</span>
-                  </span>
-                  {cert.link && (
-                    <span className="cert-view-link">
-                      View Document ↗
+        <div className="certifications-column">
+          <h3 className="credentials-sub-title">
+            <Award size={20} className="secondary-light" style={{ marginRight: '0.5rem' }} />
+            Certifications & Internships
+          </h3>
+          <div className="cert-grid">
+            {certificationData.map((cert, index) => {
+              const CardComponent = cert.link ? 'a' : 'div';
+              const extraProps = cert.link ? {
+                href: cert.link,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "glass-panel cert-card interactive"
+              } : {
+                className: "glass-panel cert-card"
+              };
+
+              return (
+                <CardComponent key={index} {...extraProps}>
+                  <div className="cert-icon-box">
+                    {cert.icon}
+                  </div>
+                  <div className="cert-info">
+                    <h3 className="cert-title">{cert.title}</h3>
+                    <span className="cert-issuer">
+                      {cert.issuer} • <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem' }}>{cert.date}</span>
                     </span>
-                  )}
-                </div>
-              </CardComponent>
-            );
-          })}
+                    {cert.link && (
+                      <span className="cert-view-link">
+                        View Document ↗
+                      </span>
+                    )}
+                  </div>
+                </CardComponent>
+              );
+            })}
+          </div>
         </div>
-      )}
+      </div>
     </section>
   );
 }
