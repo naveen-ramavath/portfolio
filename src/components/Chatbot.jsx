@@ -71,7 +71,7 @@ export default function Chatbot() {
   - LeetCode: leetcode.com/u/naveenramavath4203 (Solved 400+ problems, strong in DSA)
   
   Summary:
-  Information Technology undergraduate at CBIT (CGPA: 9.17) with strong DSA foundations (400+ LeetCode problems). Experienced in building AI-powered applications using Python, TensorFlow, LLMs, and RAG pipelines, along with scalable backend systems on AWS. Interested in Generative AI, Machine Learning, and Backend Engineering.
+  Information Technology undergraduate at CBIT (CGPA: 9.17) with a strong problem-solving foundation (400+ LeetCode problems solved). Expert in architecting agentic Generative AI systems (including multi-agent RAG pipelines and multi-model AI routing engines), engineering event-driven streaming data pipelines (Apache Kafka & PySpark), and deploying secure, auto-scaling backend infrastructure on AWS. Passionate about Generative AI, Machine Learning, and scalable Backend/DevOps engineering.
   
   Education:
   - B.E. in Information Technology, Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad. Expected Graduation: May 2027. CGPA: 9.17.

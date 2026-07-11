@@ -73,9 +73,8 @@ export default function Hero({ setActiveSection }) {
             <span className="gradient-text-alt">GenAI & Backend Dev</span>
           </h1>
           <p className="hero-description">
-            Information Technology undergraduate at <strong>CBIT (CGPA: 9.17)</strong>.
-            I build scalable backend systems, automated CI/CD pipelines, and deep-learning/RAG applications
-            using Python, TensorFlow, LLMs, and AWS cloud infrastructure.
+            Information Technology undergraduate at <strong>CBIT (CGPA: 9.17)</strong> with a strong foundation in DSA (<strong>400+ LeetCode solved</strong>).
+            Specialized in architecting agentic GenAI systems (Multi-Agent RAG & Multi-Model AI Routing), building event-driven streaming pipelines (Kafka, PySpark), and deploying scalable, secure backend infrastructure on AWS.
           </p>
 
           <div className="hero-actions">
