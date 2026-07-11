@@ -98,7 +98,7 @@ export default function Hero({ setActiveSection }) {
 
           <div className="hero-stats">
             <div className="stat-item">
-              <span className="stat-number">300+</span>
+              <span className="stat-number">400+</span>
               <span className="stat-label">LeetCode Solved</span>
             </div>
             <div className="stat-item">

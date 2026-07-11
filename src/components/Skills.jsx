@@ -31,7 +31,7 @@ export default function Skills() {
     {
       category: "Core Computer Science",
       icon: <BookOpen size={20} />,
-      skills: ["DSA (300+ LeetCode)", "OOP", "Operating Systems", "DBMS"]
+      skills: ["DSA (400+ LeetCode)", "OOP", "Operating Systems", "DBMS"]
     },
     {
       category: "Developer Tools",

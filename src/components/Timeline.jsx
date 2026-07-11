@@ -68,7 +68,7 @@ export default function Timeline() {
       link: "/certificates/gcp.pdf"
     },
     {
-      title: "LeetCode Ongoing Milestone (300+ DSA Solved)",
+      title: "LeetCode Ongoing Milestone (400+ DSA Solved)",
       issuer: "LeetCode",
       date: "Ongoing",
       icon: <BookOpen size={18} />,

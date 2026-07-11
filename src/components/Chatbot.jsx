@@ -68,10 +68,10 @@ export default function Chatbot() {
   - Address: Hyderabad, Telangana
   - LinkedIn: linkedin.com/in/ramavath-naveen-049460324
   - GitHub: github.com/naveen-ramavath
-  - LeetCode: leetcode.com/u/naveenramavath4203 (Solved 300+ problems, strong in DSA)
+  - LeetCode: leetcode.com/u/naveenramavath4203 (Solved 400+ problems, strong in DSA)
   
   Summary:
-  Information Technology undergraduate at CBIT (CGPA: 9.17) with strong DSA foundations (300+ LeetCode problems). Experienced in building AI-powered applications using Python, TensorFlow, LLMs, and RAG pipelines, along with scalable backend systems on AWS. Interested in Generative AI, Machine Learning, and Backend Engineering.
+  Information Technology undergraduate at CBIT (CGPA: 9.17) with strong DSA foundations (400+ LeetCode problems). Experienced in building AI-powered applications using Python, TensorFlow, LLMs, and RAG pipelines, along with scalable backend systems on AWS. Interested in Generative AI, Machine Learning, and Backend Engineering.
   
   Education:
   - B.E. in Information Technology, Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad. Expected Graduation: May 2027. CGPA: 9.17.
@@ -152,7 +152,7 @@ export default function Chatbot() {
     }
 
     if (q.includes('leetcode') || q.includes('dsa') || q.includes('coding') || q.includes('problem')) {
-      return "🏆 **DSA & LeetCode**\nNaveen has solved **300+ coding problems on LeetCode**, focusing on advanced data structures, algorithms, and logical problem solving.";
+      return "🏆 **DSA & LeetCode**\nNaveen has solved **400+ coding problems on LeetCode**, focusing on advanced data structures, algorithms, and logical problem solving.";
     }
 
     if (q.includes('cert') || q.includes('certification') || q.includes('internship')) {
