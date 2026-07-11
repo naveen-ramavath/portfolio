@@ -1,8 +1,20 @@
 import React from 'react';
-import { FolderGit2, ExternalLink, ShieldCheck, HeartPulse, Cpu, Cloud, Music } from 'lucide-react';
+import { FolderGit2, ExternalLink, ShieldCheck, HeartPulse, Cpu, Cloud, Music, MessageSquare } from 'lucide-react';
 
 export default function Projects() {
   const projectsData = [
+    {
+      title: "AuraWork Workspace Companion",
+      description: "An intelligent, agent-driven WhatsApp workspace companion aggregating and automating actions across Slack, Jira, Gmail, and Google Calendar.",
+      bullets: [
+        "Architected a multi-model AI routing engine with a sequential fallback chain (Gemini ➔ Groq ➔ OpenRouter ➔ DeepSeek) to dynamically delegate user requests with zero-downtime fault tolerance.",
+        "Integrated WhatsApp with Jira, Slack, and Gmail APIs using clean SOLID principles, establishing an Operations Registry for complex actions like threaded replies, attachment forwarding, and automated digests.",
+        "Engineered a granular session context registry and AES-128 Fernet encrypted SQLite storage to securely resolve conversational references across user sessions."
+      ],
+      tags: ["FastAPI", "Gemini API", "Meta Graph API", "OAuth 2.0", "Fernet Cryptography", "SQLite", "Python"],
+      github: "https://github.com/naveen-ramavath/AuraWork",
+      icon: <MessageSquare size={22} />
+    },
     {
       title: "Agri AI Advisory System",
       description: "A full-stack agricultural platform utilizing machine learning for soil classification and crop recommendations, paired with a multi-agent RAG chatbot routing queries to digital experts.",

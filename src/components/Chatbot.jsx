@@ -86,11 +86,12 @@ export default function Chatbot() {
   - Developer Tools: Git, GitHub Actions, Postman, VS Code
   
   Projects:
-  1. Agri AI Advisory System (GitHub: github.com/MiniProjectII/agri-ai-advisory-system): MERN stack, ResNet50 soil classification (95% accuracy), crop recommendation, multi-agent RAG chatbot via Gemini 2.5 Flash API/Weather API/Reddit API, Python entity-extraction pipelines.
-  2. Digital Health Portfolio (GitHub: github.com/naveen-ramavath/Digital-Health-portfolio): MERN stack deployed on AWS EC2/S3, AWS ALB and ASG handling 300+ concurrent requests (99.9% uptime), vector-search RAG pipeline via Gemini API.
-  3. AWS CI/CD Blog Auto-Deploy (GitHub: github.com/naveen-ramavath/blog-auto-deploy): CI/CD pipeline using GitHub Actions, EC2, Nginx reverse proxy, SSL/TLS, SSH, automated bash script deployment.
-  4. AeroGuard Airplane Collision Detection: Spatial collision detection under 1.2s latency on aircraft GPS streams using Kafka and PySpark, rendering on a Flask WebSocket dashboard.
-  5. Emotion Music Generator: Facial mood CNN classifier (88% accuracy) via TensorFlow/Keras & OpenCV, dynamically recommending playlists via Spotify/YouTube APIs.
+  1. AuraWork Workspace Companion (GitHub: github.com/naveen-ramavath/AuraWork): FastAPI, Gemini/Groq/DeepSeek APIs, Meta Graph API, OAuth 2.0, Fernet Cryptography, SQLite. Agentic WhatsApp companion automating tasks in Slack, Jira, and Google Workspace, featuring a multi-model routing engine and sequential fallback chain.
+  2. Agri AI Advisory System (GitHub: github.com/MiniProjectII/agri-ai-advisory-system): MERN stack, ResNet50 soil classification (95% accuracy), crop recommendation, multi-agent RAG chatbot via Gemini 2.5 Flash API/Weather API/Reddit API, Python entity-extraction pipelines.
+  3. Digital Health Portfolio (GitHub: github.com/naveen-ramavath/Digital-Health-portfolio): MERN stack deployed on AWS EC2/S3, AWS ALB and ASG handling 300+ concurrent requests (99.9% uptime), vector-search RAG pipeline via Gemini API.
+  4. AWS CI/CD Blog Auto-Deploy (GitHub: github.com/naveen-ramavath/blog-auto-deploy): CI/CD pipeline using GitHub Actions, EC2, Nginx reverse proxy, SSL/TLS, SSH, automated bash script deployment.
+  5. AeroGuard Airplane Collision Detection: Spatial collision detection under 1.2s latency on aircraft GPS streams using Kafka and PySpark, rendering on a Flask WebSocket dashboard.
+  6. Emotion Music Generator: Facial mood CNN classifier (88% accuracy) via TensorFlow/Keras & OpenCV, dynamically recommending playlists via Spotify/YouTube APIs.
   
   Certifications & Internships:
   - Salesforce Certified Agentforce Specialist (2025)
@@ -107,11 +108,15 @@ export default function Chatbot() {
     const q = query.toLowerCase();
     
     if (/\b(hello|hi|hey|greetings|yo)\b/i.test(q)) {
-      return "Hello! I am Naveen's assistant. You can ask me about his skills, education, certifications, or projects like the 'Agri-AI Advisory System' and 'AeroGuard'.";
+      return "Hello! I am Naveen's assistant. You can ask me about his skills, education, certifications, or projects like 'AuraWork', 'Agri-AI Advisory System', and 'AeroGuard'.";
     }
     
     if (q.includes('project') || q.includes('portfolio') || q.includes('build')) {
-      return "Naveen has built several notable projects:\n\n1. **Agri AI Advisory System**: Crop recommendations and soil CNN classifier, plus multi-agent RAG.\n2. **Digital Health Portfolio**: AWS-deployed MERN app with secure medical records and Gemini search.\n3. **AWS CI/CD Auto-Deploy**: Automated actions/deployment on EC2 using GitHub Actions and Nginx.\n4. **AeroGuard**: Real-time airplane collision alerting using PySpark and Kafka.\n5. **Emotion Music Generator**: CNN expression classifier recommending Spotify tracks.\n\nWhich of these would you like to hear more about?";
+      return "Naveen has built several notable projects:\n\n1. **AuraWork Workspace Companion**: Agentic WhatsApp companion automating Slack, Jira, Gmail & Calendar.\n2. **Agri AI Advisory System**: Crop recommendations and soil CNN classifier, plus multi-agent RAG.\n3. **Digital Health Portfolio**: AWS-deployed MERN app with secure medical records and Gemini search.\n4. **AWS CI/CD Auto-Deploy**: Automated actions/deployment on EC2 using GitHub Actions and Nginx.\n5. **AeroGuard**: Real-time airplane collision alerting using PySpark and Kafka.\n6. **Emotion Music Generator**: CNN expression classifier recommending Spotify tracks.\n\nWhich of these would you like to hear more about?";
+    }
+
+    if (q.includes('aurawork') || q.includes('whatsapp') || q.includes('companion') || q.includes('workspace')) {
+      return "💬 **AuraWork Workspace Companion**\n• *Stack*: FastAPI, Gemini API, Meta Graph API, OAuth 2.0, SQLite, Cryptography, Python\n• Built an agentic workspace companion enabling control of Slack, Jira, Gmail, and Calendar via WhatsApp.\n• Integrated a multi-model routing engine (Gemini, Groq, OpenRouter, DeepSeek) with a sequential fallback chain.\n• Secured credentials and tokens using AES-128 Fernet cryptography.\n• GitHub: github.com/naveen-ramavath/AuraWork";
     }
     
     if (q.includes('agri') || q.includes('soil') || q.includes('crop') || q.includes('agriculture')) {
@@ -154,7 +159,7 @@ export default function Chatbot() {
       return "📜 **Certifications & Internships**\n• Salesforce Certified Agentforce Specialist (2025)\n• Salesforce Certified AI Associate (2025)\n• AI & Prompt Engineering Internship (Vault of Codes, 2025)\n• Cloud Computing Internship Certificate (InternPro, 2025)\n• MongoDB Certified Associate Developer - Python (2025)\n• Oracle Cloud Infrastructure Certified AI Foundations Associate (2025)\n• Google Cloud Computing Fundamentals (NPTEL, 2024)";
     }
 
-    return "I can help you with questions about Naveen's projects (Agri-AI, AeroGuard), technical skills, contact details, or education history. \n\n*Tip: Click the Settings gear in the header to enter a Gemini API key and chat with a real LLM model!*";
+    return "I can help you with questions about Naveen's projects (AuraWork, Agri-AI, AeroGuard), technical skills, contact details, or education history. \n\n*Tip: Click the Settings gear in the header to enter a Gemini API key and chat with a real LLM model!*";
   };
 
   const handleSend = async (queryText) => {
@@ -227,7 +232,7 @@ export default function Chatbot() {
   };
 
   const presetQuestions = [
-    "Tell me about Agri-AI",
+    "Tell me about AuraWork",
     "What are his skills?",
     "Show me certifications",
     "How to contact him?"
