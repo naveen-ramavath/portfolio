@@ -73,19 +73,19 @@ export default function Hero({ setActiveSection }) {
             <span className="gradient-text-alt">GenAI & Backend Dev</span>
           </h1>
           <p className="hero-description">
-            Information Technology undergraduate at <strong>CBIT (CGPA: 9.17)</strong>. 
-            I build scalable backend systems, automated CI/CD pipelines, and deep-learning/RAG applications 
+            Information Technology undergraduate at <strong>CBIT (CGPA: 9.17)</strong>.
+            I build scalable backend systems, automated CI/CD pipelines, and deep-learning/RAG applications
             using Python, TensorFlow, LLMs, and AWS cloud infrastructure.
           </p>
-          
+
           <div className="hero-actions">
             <button onClick={() => handleScrollTo('projects')} className="gradient-btn">
               View Projects <ArrowRight size={16} />
             </button>
-            <a 
-              href="/resume.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="secondary-btn"
               style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
             >
@@ -111,15 +111,15 @@ export default function Hero({ setActiveSection }) {
             </div>
           </div>
         </div>
-        
+
         <div className="hero-visual">
           <div className="profile-circle-container animate-float">
             <div className="profile-glow"></div>
             <div className="profile-avatar">
-              <img 
-                src="/profile.png" 
-                alt="Ramavath Naveen Profile Avatar" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              <img
+                src="/profile.png"
+                alt="Ramavath Naveen Profile Avatar"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>
